@@ -34,11 +34,6 @@ class VM
     private $Ip;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $KluczSSH;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Backup", mappedBy="VM", orphanRemoval=true)
      */
     private $backups;
@@ -85,18 +80,6 @@ class VM
     public function setIp(?string $Ip): self
     {
         $this->Ip = $Ip;
-
-        return $this;
-    }
-
-    public function getKluczSSH(): ?string
-    {
-        return $this->KluczSSH;
-    }
-
-    public function setKluczSSH(?string $KluczSSH): self
-    {
-        $this->KluczSSH = $KluczSSH;
 
         return $this;
     }

@@ -66,7 +66,7 @@ class Plan
     /**
      * @ORM\Column(type="string", length=20, nullable=true)
      */
-    private $interval;
+    private $interwal;
 
     /**
      * @ORM\Column(type="array", nullable=true)
@@ -201,9 +201,9 @@ class Plan
         return $this->interval;
     }
 
-    public function setInterval(?string $interval): self
+    public function setInterwal(?string $interwal): self
     {
-        $this->interval = $interval;
+        $this->interwal = $interwal;
 
         return $this;
     }

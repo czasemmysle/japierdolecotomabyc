@@ -1,0 +1,11 @@
+
+{% for vM in vMs %}
+    <tr>
+        <td>
+            <input type="checkbox"
+                class="custom-control-input no-margin"
+                id="customCheck1" name="machineIds[]" value="{{ vM.id }}">
+        </td>
+        <td>{{ vM.NazwaVM }}</td>
+    </tr>
+{% endfor %}

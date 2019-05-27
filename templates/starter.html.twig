@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UBS | Nettom</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- Kalendarz -->
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
+        integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
+
+    <script src="/index.js"></script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+
+<body class="hold-transition skin-black  sidebar-mini">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Logo -->
+                <a href="index2.html" class="logo">
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><b>Unicorns</b>BackupSystem</span>
+                </a>
+            </nav>
+        </header>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-5">
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Niewykonane</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <!-- Tabela niewykonanych backupow -->
+                                    <div class="scrollable">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th style="width: 10px">#</th>
+                                                <th>Maszyna</th>
+                                                <th style="width: 200px">Komunikat</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>ID_Maszyna1</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>ID_Maszyna2</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>ID_Maszyna3</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>ID_Maszyna4</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5.</td>
+                                                <td>ID_Maszyna5</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6.</td>
+                                                <td>ID_Maszyna5</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7.</td>
+                                                <td>ID_Maszyna5</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8.</td>
+                                                <td>ID_Maszyna5</td>
+                                                <td><span class="badge bg-red">Treść komunikatu</span></td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                    <!-- ./Tabela niewykonanych backupow -->
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <ul class="pagination pagination-sm no-margin pull-right">
+                                        <li><button type="button" class="btn bg-navy no-margin">Ponów</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.box -->
+
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Oczekujące</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <!-- Tabela wykonywanych backupow -->
+                                    <div class="scrollable">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th style="width: 10px">#</th>
+                                                <th>Maszyna</th>
+                                                <th style="width: 150px">Status</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>ID_Maszyna1</td>
+                                                <td>Walidacja</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>ID_Maszyna2</td>
+                                                <td>Walidacja</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>ID_Maszyna3</td>
+                                                <td>Walidacja</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>ID_Maszyna4</td>
+                                                <td>Walidacja</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5.</td>
+                                                <td>ID_Maszyna5</td>
+                                                <td>Walidacja</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!-- /.Tabela wykonywanych backupow -->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <div class="col-md-7">
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Zaplanowane backupy</h3>
+                                    <ul class="pagination pagination-sm no-margin pull-right">
+                                        <!-- TU MA BYĆ NOWY PRZYCISK DO WYŚWIETLANIA FORMULARZA -->
+                                        <li><button type="button" class="btn bg-navy n-pad no-margin"
+                                                data-toggle="modal" data-target="#myModal"
+                                                data-whatever="whatever">+</button></li>
+                                    </ul>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="scrollable1">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th style="width: 10px"></th>
+                                                <th>Nazwa backupu</th>
+                                                <th>Lista maszyn</th>
+                                                <th style="width: 20px"></th>
+                                                <th style="width: 20px"></th>
+                                            </tr>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td class="name">Update software</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td class="name">Clean database</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td class="name">Cron job running</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.</td>
+                                                <td class="name">Fix and squish bugs</td>
+                                                <td>Baaaaaaaaaaaaaaaardzo długa lista maszyn</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal"><i
+                                                            class="fa fa-gears"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#id_zapytanie"><i
+                                                            class="fa fa-trash"></i></a> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!--Modal dodawanie Backupu  -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form action="/action_page.php" method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Zaplanuj backup</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="content container-fluid">
+
+                            <!-- SELECT2 EXAMPLE -->
+                            <div class="row">
+                                <!-- /.col (left) -->
+                                <div class="col-md-12">
+                                    <div class="box">
+                                        <div class="form-group">
+                                            <div class="input-etykieta" id="input_etykieta">
+                                                <button type="button" class="etButton" id="id_etButton"
+                                                    name="etButton">+</button>
+                                                <input type="text" class="etykieta" placeholder="Etykieta" required name="etykieta">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Lista maszyn</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <div class="scrollable2">
+                                                        <table class="table table-bordered" id="id_listamaszyn">
+
+                                                            <tr>
+                                                                <th style="width: 10px">#</th>
+                                                                <th>Nazwa</th>
+                                                            </tr>
+                                                            {% include 'machine-list-item.html.twig' %}
+                                                        
+                                                        </table>
+                                                    </div>
+                                                    <div class="button_localization">
+                                                        <button type="button" class="btn bg-navy no-margin"
+                                                            id="zaznacz_wszystko" name="zaznacz">Zaznacz
+                                                            wszystko</button>
+                                                        <button type="button" class="btn bg-navy no-margin"
+                                                            id="odznacz_wszystko" name="odznacz">Odznacz
+                                                            wszystko</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+
+
+                                            <!-- /.box -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Tu już jest kalendarz</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+
+                                                    <!--  data i godzina  -->
+                                                    <label for="">Data:
+                                                        <input type="date" class="date_input bg-navy margin" required name="date">
+                                                    </label>
+                                                    <label for="">Godzina:
+                                                        <input type="time" class="time_input bg-navy margin" required name="time">
+                                                    </label>
+                                                    <!-- radio buttony -->
+                                                    <label class="container margin">Nie powtarzaj
+                                                        <input type="radio" checked="checked" name="radio" value="1">
+                                                        <span class="checkmark "></span>
+                                                    </label>
+                                                    <label class="container margin">Codziennie
+                                                        <input type="radio" name="radio" value="2">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="container margin">Powtarzaj co:
+                                                        <input type="radio" name="radio" value="3">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <!-- inputy i selekty -->
+                                                    <div id="input_select">
+                                                        <div class="select0 pad-left">
+                                                            <input type="number" name="quantity" class="bg-navy margin"
+                                                                min="1" value="1" disabled="disabled">
+                                                            <select name="interwal" id="czas" class="bg-navy no-margin"
+                                                                disabled="disabled">
+                                                                <option value="1" selected>tydzień</option>
+                                                                <option value="2">miesiąc</option>
+                                                                <option value="3">rok</option>
+                                                            </select>
+                                                            <div class="weekDays-selector margin-left">
+                                                                <input type="checkbox" id="weekday-mon" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-mon">Pon</label>
+                                                                <input type="checkbox" id="weekday-tue" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-tue">Wt</label>
+                                                                <input type="checkbox" id="weekday-wed" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-wed">Śr</label>
+                                                                <input type="checkbox" id="weekday-thu" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-thu">Cz</label>
+                                                                <input type="checkbox" id="weekday-fri" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-fri">P</label>
+                                                                <input type="checkbox" id="weekday-sat" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-sat">Sob</label>
+                                                                <input type="checkbox" id="weekday-sun" name="weekday"
+                                                                    class="weekday" disabled="disabled" />
+                                                                <label for="weekday-sun">N</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+                                            <!-- /.box -->
+
+                                        </div>
+                                        <!-- /.box -->
+
+                                        <div class="col-md-12">
+                                            <div class="box">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Lokalizacje</h3>
+                                                </div>
+                                                <div class="box-body" id="input_lokalizacja">
+                                                    <!-- IP mask -->
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>Lokalizacja backupu plików:</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-laptop"></i>
+                                                                </div>
+                                                                <input type="text" id="StorageF" class="form-control"
+                                                                    data-inputmask="'alias': 'ip'" data-mask required name="lokf">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Lokalizacja backupu maszyn wirtualnych:</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-laptop"></i>
+                                                                </div>
+                                                                <input type="text" id="StorageVM" class="form-control"
+                                                                    data-inputmask="'alias': 'ip'" data-mask required name="lokmv">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>Lokalizacja backupu baz danych:</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-laptop"></i>
+                                                                </div>
+                                                                <input type="text" id="StorageBD" class="form-control"
+                                                                    data-inputmask="'alias': 'ip'" data-mask required name="lokdb">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Lokalizacja Final Storage:</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-laptop"></i>
+                                                                </div>
+                                                                <input type="text" id="FinalStorage"
+                                                                    class="form-control" data-inputmask="'alias': 'ip'"
+                                                                    data-mask required
+                                                                    name="lokfs">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </section>
+                        <!-- /.content -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn bg-navy no-margin" value="Zapisz">
+                    <input type="submit" class="btn bg-navy no-margin" data-dismiss="modal" value="Zamknij">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- CZY USUNĄĆ PLAN BACKUPU? -->
+
+    <div class="modal fade" id="id_zapytanie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="sl-box">
+            <div class="col-md-12">
+                <div class="box-header with-border"></div>
+                <div class="zapytanie_napis">
+                    <label>Czy na pewno chcesz usunąć <label id="take_name"></label>?</label>
+                </div>
+                <div class="box-header with-border"></div>
+                <div class="button_localization trash">
+                    <input type="submit" class="btn bg-navy no-margin" value="Ok">
+                    <input type="submit" class="btn bg-navy no-margin" data-dismiss="modal" value="Anuluj">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- Bootstrap 3.3.7 -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Select2 -->
+    <script src="/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- date-range-picker -->
+    <script src="/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+</body>
+
+</html>

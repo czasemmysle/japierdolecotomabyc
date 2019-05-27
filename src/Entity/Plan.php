@@ -196,9 +196,9 @@ class Plan
         return $this;
     }
 
-    public function getInterval(): ?string
+    public function getInterwal(): ?string
     {
-        return $this->interval;
+        return $this->interwal;
     }
 
     public function setInterwal(?string $interwal): self

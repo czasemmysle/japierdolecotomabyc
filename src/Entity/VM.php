@@ -29,7 +29,7 @@ class VM
     private $NazwaVM;
 
     /**
-     * @ORM\Column(type="string", length=15, nullable=true)
+     * @ORM\Column(type="string", length=15, nullable=false)
      */
     private $Ip;
 
@@ -37,6 +37,11 @@ class VM
      * @ORM\OneToMany(targetEntity="App\Entity\Backup", mappedBy="VM", orphanRemoval=true)
      */
     private $backups;
+     
+    public function __toString()
+    {
+    return (string)$this->id;
+    }
 
     public function __construct()
     {
